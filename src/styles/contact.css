@@ -1,0 +1,56 @@
+.contact {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.contactContainer {
+  max-width: 600px;
+  text-align: center;
+}
+
+.contactContainer h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.contactSubtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* LINKS */
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.contactLinks a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #111;
+  padding: 12px 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER = recruiter candy */
+.contactLinks a:hover {
+  background: #f7f7f7;
+  transform: translateY(-2px);
+  border-color: #ddd;
+  box-shadow: #eee;
+}
+
+/* NOTE TEXT */
+.contactNote {
+  font-size: 14px;
+  color: #888;
+}

@@ -45,12 +45,12 @@ export default function Home() {
 
       <section className="about" id="about">
   <div className="aboutLeft">
-    <h2>About Me</h2>
-    <p><em>Hi, I'm Jocelyn Heredia!</em></p>
-    <p>I'm Computer Engineering student with a minor in Mathematics, passionate about building thoughtful, intuitive digital experiences.</p>
-    <p>I'm especially interested in front-end development and data-driven design where clean code meets intentional user experience.</p>
-    <p>I value simplicity, structure, and collaboration, and I'm constantly pushing myself to grow both technically and personally.</p>
-    <p>You'll usually find me refining ideas over coffee whether it's debugging code, designing interfaces, or planning my next big goal.</p>
+    <h2 className="reveal-on-scroll">About Me</h2>
+      <p className="reveal-on-scroll delay-1"><em>Hi, I'm Jocelyn Heredia!</em></p>
+      <p className="reveal-on-scroll delay-2">I'm a Computer Engineering student with a minor in Mathematics, passionate about building thoughtful, intuitive digital experiences.</p>
+      <p className="reveal-on-scroll delay-3">I'm especially interested in front-end development and data-driven design where clean code meets intentional user experience.</p>
+      <p className="reveal-on-scroll delay-4">I value simplicity, structure, and collaboration, and I'm constantly pushing myself to grow both technically and personally.</p>
+      <p className="reveal-on-scroll delay-4">You'll usually find me refining ideas over coffee whether it's debugging code, designing interfaces, or planning my next big goal.</p>
   </div>
 
   <div className="aboutRight">
@@ -68,34 +68,34 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="skills" id="skills">
-        <h2>Technical Skills</h2>
-        <div className="skillsGrid">
-          <div>
-            <h3>Languages</h3>
-            <div className="skillTags">
-              <span>HTML/CSS</span>
-              <span>JavaScript</span>
-              <span>TypeScript</span>
-              <span>Java</span>
-              <span>SQL</span>
-              <span>Python</span>
-              <span>R</span>
-              <span>C/C++</span>
-            </div>
-          </div>
-          <div>
-            <h3>Tools & Frameworks</h3>
-            <div className="skillTags">
-              <span>Vite/React</span>
-              <span>VS Code</span>
-              <span>GitHub</span>
-              <span>Git</span>
-              <span>Figma</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="skills" id="skills">
+  <h2 className="reveal-on-scroll">Technical Skills</h2>
+  <div className="skillsGrid">
+    <div className="reveal-on-scroll delay-1">
+      <h3>Languages</h3>
+      <div className="skillTags">
+        <span>HTML/CSS</span>
+        <span>JavaScript</span>
+        <span>TypeScript</span>
+        <span>Java</span>
+        <span>SQL</span>
+        <span>Python</span>
+        <span>R</span>
+        <span>C/C++</span>
+      </div>
+    </div>
+    <div className="reveal-on-scroll delay-2">
+      <h3>Tools & Frameworks</h3>
+      <div className="skillTags">
+        <span>Vite/React</span>
+        <span>VS Code</span>
+        <span>GitHub</span>
+        <span>Git</span>
+        <span>Figma</span>
+      </div>
+    </div>
+  </div>
+</section>
       
     </>
   );

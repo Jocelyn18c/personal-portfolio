@@ -338,22 +338,23 @@
   }
   
   .footer-btn {
-    background: #e7e2eb;
+    background: rgba(212, 149, 106, 0.12);
+    border: 1px solid rgba(196, 113, 138, 0.35);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 12px;
     margin-left: 40px;
     cursor: pointer;
-    border: none;
     display: inline-block;
     transition: all 0.25s ease;
   }
   
   .footer-btn:hover {
+    background: rgba(203, 152, 167, 0.2);
     transform: translateY(-2px);
-    background: #cfced0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 16px rgba(203, 152, 167, 0.15);
   }
+  
   
   .footer-btn:active {
     transform: translateY(0px) scale(0.98);

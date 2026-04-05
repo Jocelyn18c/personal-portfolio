@@ -7,6 +7,16 @@ import Contact from "./pages/contact";
 import Resume from "./pages/resume";
 import Projects from "./pages/projects";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function ScrollProgress() {
   const [width, setWidth] = useState(0);
 
@@ -61,6 +71,7 @@ function App() {
   return (
     <Router>
       <ScrollProgress />
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

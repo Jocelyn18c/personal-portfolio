@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./components/footer";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Resume from "./pages/resume";
 import Projects from "./pages/projects";

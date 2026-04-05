@@ -3,57 +3,129 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 60px 40px;
 }
 
-.contactContainer {
-  max-width: 600px;
-  text-align: center;
+.contactLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  gap: 60px;
 }
 
-.contactContainer h1 {
-  font-size: 48px;
-  margin-bottom: 16px;
-  font-family: 'Playfair Display', serif; 
+.contactLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactAvatar {
+  width: 100%;
+  max-width: 340px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.avatarWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.floatingIcon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  animation: floatBob 3s ease-in-out infinite;
+}
+
+.icon1 { top: 10%;  left: -30px;  animation-delay: 0s; }
+.icon2 { top: 60%;  left: -40px;  animation-delay: 0.8s; }
+.icon3 { top: 15%;  right: -30px; animation-delay: 0.4s; }
+.icon4 { top: 55%;  right: -20px; animation-delay: 1.2s; }
+
+.icon1 { width: 80px; height: 80px; } 
+.icon2 { width: 85px; height: 85px; }  
+.icon3 { width: 75px; height: 75px; }  
+.icon4 { width: 80px; height: 80px; }  
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.contactWatermark {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(80px, 14vw, 160px);
+  line-height: 0.9;
+  color: rgba(196, 113, 138, 0.12);
+  user-select: none;
+  letter-spacing: -0.02em;
+}
+
+.contactRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactRight h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin: 0;
+  color: #3a2020;
 }
 
 .contactSubtitle {
   font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
-  margin-bottom: 40px;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 0;
 }
 
-/* LINKS */
 .contactLinks {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 12px;
 }
 
 .contactLinks a {
   font-family: 'DM Sans', sans-serif;
   text-decoration: none;
-  font-size: 18px;
-  color: #111;
+  font-size: 16px;
+  color: #5c3328;
   padding: 12px 20px;
-  border: 1px solid #eee;
+  border: 1px solid rgba(196, 113, 138, 0.25);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
-/* HOVER = recruiter candy */
 .contactLinks a:hover {
-  background: #f7f7f7;
-  transform: translateY(-2px);
-  border-color: #ddd;
-  box-shadow: #eee;
+  background: rgba(212, 149, 106, 0.1);
+  transform: translateX(4px);
+  border-color: rgba(196, 113, 138, 0.4);
+  box-shadow: 0 4px 12px rgba(203, 152, 167, 0.2);
 }
 
-/* NOTE TEXT */
 .contactNote {
-  font-size: 14px;
-  color: #888;
+  font-size: 13px;
+  color: #aaa;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contactLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contactWatermark {
+    font-size: clamp(60px, 20vw, 100px);
+    text-align: center;
+  }
 }

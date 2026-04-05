@@ -14,9 +14,11 @@
 .contactContainer h1 {
   font-size: 48px;
   margin-bottom: 16px;
+  font-family: 'Playfair Display', serif; 
 }
 
 .contactSubtitle {
+  font-family: 'DM Sans', sans-serif;
   font-size: 18px;
   color: #666;
   margin-bottom: 40px;
@@ -32,6 +34,7 @@
 }
 
 .contactLinks a {
+  font-family: 'DM Sans', sans-serif;
   text-decoration: none;
   font-size: 18px;
   color: #111;

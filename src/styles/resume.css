@@ -6,11 +6,13 @@
   }
   
   .resumeContainer h1 {
+    font-family: 'Playfair Display', serif; 
     font-size: 42px;
     margin-bottom: 20px;
   }
   
   .resumeContainer p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;

@@ -5,7 +5,7 @@ const projects = [
   {
     title: "OpenCall",
     badge: "🥈 2nd Place — SparkHacks 2026",
-    stats: [{ label: "built in", value: "24hrs" }, { label: "of 40+ teams", value: "2nd" }],
+    stats: [{ label: "built in", value: "24hrs" }, { label: "of 200 teams", value: "2nd" }],
     description:
       "A match-based talent discovery platform for film & TV. Connects writers, actors, and producers through creative alignment — not follower counts. Designed end-to-end in Figma and built with React and TypeScript.",
     tags: ["React", "TypeScript", "Figma", "UX Design"],
@@ -21,6 +21,15 @@ const projects = [
     description:
       "An embedded offline music player with a fully custom graphical UI built in C/C++ on a Teensy 4.1. Features file explorer, playlist management, album browsing, and playback controls — music stored and accessed via SD card over USB MTP.",
     tags: ["C/C++", "Teensy 4.1", "ESP32", "UI Design", "ILI9341"],
+    links: [],
+  },
+  {
+    title: "TechnoLuz",
+    badge: null,
+    stats: null,
+    description:
+    "A bilingual ed-tech platform designed to inspire Hispanic K–8 students to explore STEM and envision a future in college. Features interactive lessons, Hispanic role model profiles, and light coding activities for students plus a teacher dashboard with progress tracking and language toggling between English and Spanish.", 
+    tags: ["React", "Vite", "CSS", "Figma"],
     links: [],
   },
   {
@@ -57,7 +66,7 @@ export default function Projects() {
     if (diff === 1 || diff === -(projects.length - 1)) return "next";
     if (diff === -1 || diff === projects.length - 1) return "prev";
     return "hidden";
-  };
+  }; 
 
   return (
     <div className="projects">

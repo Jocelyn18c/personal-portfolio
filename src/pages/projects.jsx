@@ -86,11 +86,8 @@ export default function Projects() {
             <div className="cardAccent" />
 
             <div className="projectHeader">
-            <div className="projectTitleRow">
-            {project.logo && (<img src={project.logo} alt="" className="projectLogo" />)}
             <h3>{project.title}</h3>
               {project.badge && <span className="badge">{project.badge}</span>}
-            </div>
             </div>
 
             {project.stats && (

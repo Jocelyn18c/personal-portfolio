@@ -25,7 +25,6 @@ const projects = [
   },
   {
     title: "TechnoLuz",
-    logo: "/technoluna-logo.png",
     badge: null,
     stats: null,
     description:

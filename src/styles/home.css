@@ -336,15 +336,15 @@
 
   .photoFood {
     width: 160px;
-    top: -20px;
-    left: 30px;
+    top: -15px;
+    left: 50px;
     right: unset;
   }
 
   .photoSelfie {
     width: 150px;
     height: 180px;
-    top: 80px;
+    top: 85px;
     left: 130px;
     right: unset;
   }
@@ -358,9 +358,9 @@
   }
 
   .photoDrinks {
-    width: 140px;
-    top: 180px;
-    left: 170px;
+    width: 130px;
+    top: 190px;
+    left: 200px;
     right: unset;
   }
 }

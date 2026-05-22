@@ -17,7 +17,7 @@ export default function Home() {
         <div className="heroOverlay"></div>
         <div className="heroContent">
           <h1 className="heroTitle"> Jocelyn Heredia </h1>
-          <p className="subtitle reveal delay1">Computer Engineering Student</p>
+          <p className="subtitle reveal delay1">UX Engineer · MS HCI Incoming</p>
           <p className="subtitle reveal delay2">Frontend Developer · UI/UX Designer</p>
           <p className="tagline reveal delay3">Creating simple, thoughtful digital systems</p>
         </div>
@@ -27,8 +27,8 @@ export default function Home() {
         <div className="aboutLeft">
           <h2 className="reveal-on-scroll">About Me</h2>
           <p className="reveal-on-scroll delay-1"><em>Hi, I'm Jocelyn Heredia!</em></p>
-          <p className="reveal-on-scroll delay-2">I'm a Computer Engineering student with a minor in Mathematics, passionate about building thoughtful, intuitive digital experiences.</p>
-          <p className="reveal-on-scroll delay-3">I'm especially interested in front-end development and data-driven design where clean code meets intentional user experience.</p>
+          <p className="reveal-on-scroll delay-2">I recently graduated with a B.S. in Computer Engineering and a minor in Mathematics from University of Illinois Chicago (UIC), and I'll be starting my M.S. in Human-Computer Interaction at DePaul this fall. </p>
+          <p className="reveal-on-scroll delay-3">I'm passionate about building thoughtful, intuitive digital experiences especially at the intersection of front-end development and UX, where clean code meets intentional design. </p>
           <p className="reveal-on-scroll delay-4">I value simplicity, structure, and collaboration, and I'm constantly pushing myself to grow both technically and personally.</p>
           <p className="reveal-on-scroll delay-4">You'll usually find me refining ideas over coffee whether it's debugging code, designing interfaces, or planning my next big goal.</p>
         </div>

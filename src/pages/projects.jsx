@@ -14,14 +14,18 @@ const projects = [
       { label: "Devpost", url: "https://devpost.com/software/open-call" },
     ],
   },
-  {
-    title: "Auffline",
-    badge: "🎓 Senior Capstone",
-    stats: null,
-    description:
-      "An embedded offline music player with a fully custom graphical UI built in C/C++ on a Teensy 4.1. Features file explorer, playlist management, album browsing, and playback controls — music stored and accessed via SD card over USB MTP.",
-    tags: ["C/C++", "Teensy 4.1", "ESP32", "UI Design", "ILI9341"],
-    links: [],
+    {
+      title: "Auffline",
+      badges: [
+        "🎓 Senior Capstone",
+        "🏆 Top 5 — UIC EXPO 2026",
+        "🥇 Best Table — Senior Design"
+      ],
+      stats: null,
+      description:
+        "An embedded offline music player with a fully custom graphical UI built in C/C++ on a Teensy 4.1. Features file explorer, playlist management, album browsing, and playback controls — music stored and accessed via SD card over USB MTP. Presented at UIC EXPO 2026 — Top 5 of 31 teams & Best Table for Senior Design.",
+      tags: ["C/C++", "Teensy 4.1", "ESP32", "UI Design", "ILI9341"],
+      links: [],
   },
   {
     title: "TechnoLuz",

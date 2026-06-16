@@ -1,10 +1,10 @@
 import "../styles/contact.css";
-import useScrollReveal from "../hooks/useScrollReveal";
 import avatar from "../assets/me.png";
 import laptopIcon from "../assets/laptop.png";
 import paintIcon from "../assets/paint.png";
 import matchaIcon from "../assets/strawberry matcha.png";
 import headphonesIcon from "../assets/headphones.png";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 export default function Contact() {
   useScrollReveal();

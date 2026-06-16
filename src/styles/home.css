@@ -1,286 +1,309 @@
-
-@keyframes floatSoft {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+.bento-grid {
+  display: grid;
+  grid-template-columns: 267fr 261fr 242fr 157fr;
+  grid-template-rows: 110px 230px 99px 250px;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
 }
 
-.hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    padding: 170px 20px 80px;
-    position: relative;
-    overflow: hidden;
-  }
+.bento-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px;
+  background-color: #fdeef0;
+}
 
-.hero::after {
-  content: '';
+.bento-role {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.bento-role img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bento-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  flex-shrink: 0;
+  gap: 32px;
+}
+
+.bento-left h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  font-family: 'Trispace', monospace;
+  font-weight: 200;
+}
+
+.bento-role p {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.bento-role h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.bento-grid div {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.bento-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portrait-card     { grid-column: 1;   grid-row: 1/3; }
+.exploring-card    { grid-column: 1;   grid-row: 3; }
+.text-bubble       { grid-column: 2;   grid-row: 1; }
+.food-card         { grid-column: 2;   grid-row: 2/4; }
+.chicago-card      { grid-column: 3;   grid-row: 1/3; }
+.inge-card         { grid-column: 3/5; grid-row: 3; }
+.blue-bottle-card  { grid-column: 4;   grid-row: 1; }
+.corazon-card      { grid-column: 4;   grid-row: 2; }
+.grad-card         { grid-column: 1;   grid-row: 4; }
+.lincoln-card      { grid-column: 3/5;  grid-row: 4; } 
+.hardware-card     { grid-column: 2;    grid-row: 4;}
+
+
+/* text/graphic cards: show full content, no cropping */
+.exploring-card img,
+.inge-card img,
+.corazon-card img,
+.blue-bottle-card img {
+  object-fit: contain;
+}
+
+.exploring-card {
+  background: #FDFBF7;
+}
+
+.text-bubble img {
+  width: 100%;
+  height: auto;
+}
+
+.text-bubble {
+  background: #FDFBF7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+/* photo cards */
+.portrait-card img { object-fit: cover; }
+.food-card img     { object-fit: cover; }
+.chicago-card img  { object-fit: contain; }
+
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+.about {
+  flex: 1;
+}
+
+.about h2 {
+  font-size: 3rem;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #333;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.aboutRight {
+  flex: 1;
+  position: relative;
+  height: 780px;
+  min-width: 420px;
+}
+
+.collage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, transparent, #fdf8f6);
-  pointer-events: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-  .heroOverlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.08);
-    pointer-events: none;
-  }
-  
-  .heroContent {
-    font-family: 'DM Sans', sans-serif;
-    text-align: center;
-    max-width: 600px;
-    padding: 0px;
-    position: relative;
-    z-index: 2;
-    }
+.photoFood:hover {
+  transform: rotate(-28deg) scale(1.04);
+  z-index: 10;
+}
 
-  .heroTitle,
-  .reveal {
-    opacity: 0;
-    filter: blur(10px);
-    transform: translateY(12px);
-    animation: softReveal 0.9s ease forwards;
-  }
-  
-  .heroTitle {
-    font-family: 'Playfair Display', serif; 
-    font-weight: 900;
-    white-space: nowrap;
-    font-size: clamp(80px, 12vw, 100px);
-    letter-spacing: -0.01em;
-    animation-delay: 0.1s;
-  }
 
-  .firstName, .lastName {
-    font-family: inherit;
-    -webkit-text-fill-color: initial;
-    -webkit-text-stroke: 0;
-    color: inherit;
-    opacity: 0;
-    animation: softReveal 0.9s ease 0.1s forwards;
-  }
+.photoSelfie:hover {
+  transform: rotate(1deg) scale(1.04);
+  z-index: 10;
+}
 
-  @keyframes gradientShift {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-  }
-  
-  .subtitle {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: xx-large;
-  }
-  
-  .tagline {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: xx-large;
-    white-space: nowrap;
-  }
-  .delay1 {
-    animation-delay: 0.3s;
-  }
-  
-  .delay2 {
-    animation-delay: 0.5s;
-  }
-  
-  .delay3 {
-    animation-delay: 0.7s;
-  }
-  
-  @keyframes softReveal {
-    to {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0);
-    }
-  }
+.photoDrinks:hover {
+  transform: rotate(-2deg) scale(1.04);
+  z-index: 10;
+}
 
-  .about {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 1100px;                    
-    margin: 80px auto;
-    padding: 0 40px;
-    gap: 40px;
-    flex-wrap: nowrap;
-  }
-  
-  .aboutLeft {
-    flex: 1;
-    max-width: 480px;
-  }
-  
-  .aboutLeft h2 {
-    font-size: 3rem;
-    font-family: 'DM Sans', sans-serif;
-    margin-bottom: 24px;
-  }
-  
-  .about p {
-    font-size: 30px;
-    margin-bottom: 16px;
-    line-height: 1.8;
-    color: #555;
-    font-family: 'DM Sans', sans-serif;
-  }
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 
-  .aboutLeft p {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin-bottom: 16px;
-    color: #333;
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.photoFood {
+  top: 25px;
+  right: 120px;
+  width: 310px;
+  height: auto;
+  transform: rotate(-31deg);
+  z-index: 1;
+}
+
+.photoSelfie {
+  top: 200px;
+  right: 30px;
+  width: 240px;
+  height: 340px;
+  z-index: 10;
+}
+
+.photoDrinks {
+  top: 400px;
+  right: -80px;
+  width: 290px;
+  height: auto;
+  transform: rotate(-5deg);
+  z-index: 10;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .bento-hero {
+    flex-direction: column;
+    padding: 32px 24px 48px;
   }
-  
-  .aboutRight {
-    flex: 1;
-    position: relative;
-    height: 700px;
-    min-width: 380px;
-  }
-  
-  .collage {
-    position: relative;
+  .bento-left {
+    flex: none;
     width: 100%;
-    height: 100%;
   }
-  
-  .photo {
-    position: absolute;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .photoFood:hover {
-    transform: rotate(-28deg) scale(1.04);
-    z-index: 10;
-  }
-  
-  .photoSelfie:hover {
-    transform: rotate(1deg) scale(1.04);
-    z-index: 10;
-  }
-  
-  .photoDrinks:hover {
-    transform: rotate(-2deg) scale(1.04);
-    z-index: 10;
-  }
-  
-  .photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-  
-  .polaroid {
-    background: white;
-    padding: 10px 10px 30px 10px;
-    box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.12);
-  }
-  
-  .photoFood {
-    top: 25px;
-    right: 145px;
-    width: 270px;
-    height: auto;
-    transform: rotate(-31deg);
-    z-index: 1;
-  }
-  
-  .photoSelfie {
-    top: 200px;
-    right: 70px;
-    width: 180px;
-    height: 250px;
-    z-index: 10;
-  }
-  
-  .photoDrinks {
-    top: 370px;
-    right: -40px;
-    width: 250px;
-    height: auto;
-    transform: rotate(-5deg);
-    z-index: 10;
-  }
-
-  .skills {
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    border-radius: 32px;
-  }
-  
-  .skills h2 {
-    font-size: 2.5rem;
-    font-family: 'DM Sans', sans-serif;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #3a2020;
-  }
-  
-  .skillsGrid {
-    display: grid;
+  .bento-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-rows: auto;
   }
-
-  .skillsGrid > div {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 149, 106, 0.2);
-    border-radius: 24px;
-    padding: 40px;
-    width: 100%;
-    box-shadow: 0 8px 32px rgba(196, 113, 138, 0.1), 0 2px 8px rgba(0,0,0,0.04);
-    box-sizing: border-box;
-  }
-  
-  .skillsGrid h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-align: center;
-    margin-left: 0px;
-  }
-  
-  .skillTags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  
-  .skillTags span {
-    background: rgba(212, 149, 106, 0.12);
-    border: 1px solid rgba(196, 113, 138, 0.25);
-    color: #5c3328;
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    display: inline-block;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    opacity: 0;
-    transform: translateY(8px);
+  .portrait-card   { grid-column: 1; grid-row: 1 / 3; }
+  .text-bubble     { grid-column: 2; grid-row: 1; }
+  .chicago-card    { grid-column: 2; grid-row: 2 / 4; }
+  .blue-bottle-card { grid-column: 1; grid-row: 3; }
+  .coffee-card     { grid-column: 1; grid-row: 4; }
+  .corazon-card    { grid-column: 2; grid-row: 4; }
+  .bento-tagline   { grid-column: 1 / 3; grid-row: 5; justify-content: flex-start; }
 }
-  .reveal-on-scroll.visible .skillTags span {
+
+/* ── Technical Skills Styles ── */
+.skills {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  border-radius: 32px;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3a2020;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.skillsGrid > div {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(196, 113, 138, 0.1), 0 2px 8px rgba(0,0,0,0.04);
+  box-sizing: border-box;
+}
+
+.skillsGrid h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skillTags span {
+  background: rgba(212, 149, 106, 0.12);
+  border: 1px solid rgba(196, 113, 138, 0.25);
+  color: #5c3328;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.reveal-on-scroll.visible .skillTags span {
   opacity: 1;
   transform: translateY(0);
 }
@@ -294,37 +317,15 @@
 .skillTags span:nth-child(7) { transition-delay: 0.35s; }
 .skillTags span:nth-child(8) { transition-delay: 0.4s; }
 
-  .skillTags span:hover {
-    background: rgba(203, 152, 167, 0.15);
-    border-color: rgba(203, 152, 167, 0.15);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(203, 152, 167, 0.15);
-  }
+.skillTags span:hover {
+  background: rgba(203, 152, 167, 0.15);
+  border-color: rgba(203, 152, 167, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(203, 152, 167, 0.15);
+}
 
-/* Mobile settings */
-
+/* Skills Mobile Settings Only */
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: clamp(48px, 12vw, 72px);
-    white-space: normal;
-  }
-
-  .subtitle, .tagline {
-    font-size: large;
-    white-space: normal;
-  }
-
-  .about {
-    flex-direction: column;
-    padding: 0 20px;
-    margin: 40px auto;
-  }
-
-  .aboutRight {
-    height: 320px;
-    overflow: hidden;
-  }
-
   .skills {
     padding: 20px;
     margin: 40px 20px;
@@ -332,35 +333,5 @@
 
   .skillsGrid {
     grid-template-columns: 1fr;
-  }
-
-  .photoFood {
-    width: 160px;
-    top: -15px;
-    left: 50px;
-    right: unset;
-  }
-
-  .photoSelfie {
-    width: 150px;
-    height: 180px;
-    top: 85px;
-    left: 130px;
-    right: unset;
-  }
-
-  .photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  .photoDrinks {
-    width: 130px;
-    top: 190px;
-    left: 200px;
-    right: unset;
   }
 }

@@ -37,6 +37,17 @@ const projects = [
     links: [],
   },
   {
+    title: "Job Market Pipeline",
+    badge:null,
+    stats:null,
+    description:
+      "A full-stack data pipeline that extracts in-demand skills from job postings and visualizes them in a live dashboard. Python parses job descriptions and stores structured results in a relational SQLite database, a Flask API serves the data, and a React frontend renders real-time stats — total jobs tracked, most in-demand skill, and matched skills per role.",
+    tags: ["Python", "SQL", "Flask", "React", "REST API"],
+    links: [
+      {label: "GitHub", url: "https://github.com/Jocelyn18c/job-market-pipeline"}
+    ]
+  },
+  {
     title: "OutlookSpark",
     badge: null,
     stats: null,

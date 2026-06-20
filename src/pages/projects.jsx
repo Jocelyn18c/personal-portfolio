@@ -28,7 +28,7 @@ const projects = [
       links: [],
   },
   {
-    title: "TechnoLuz",
+    title: "TechnoLuna",
     badge: null,
     stats: null,
     description:

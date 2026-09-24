@@ -1,16 +1,37 @@
-# React + Vite
+# Jocelyn Heredia — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A plain HTML/CSS/JS portfolio. No build step. Open any `.html` file in a browser, or use VS Code's Live Server.
 
-Currently, two official plugins are available:
+## Editing in VS Code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Open this folder in VS Code (`File → Open Folder…`, or `code .` in a terminal here).
+2. Install the recommended **Live Server** extension when VS Code prompts you.
+3. Right-click `index.html` → **Open with Live Server**. The page reloads every time you save.
 
-## React Compiler
+## Where things are
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| File | What it is |
+| --- | --- |
+| `index.html` | About Me (home page) |
+| `projects.html` | Projects: copy an `<article class="project">` block to add one |
+| `resume.html` | Resume |
+| `contact.html` | Contact form and links |
+| `css/styles.css` | All styling. The coffee/summer palette is at the top in `:root` |
+| `js/main.js` | Mobile menu, scroll animations, rotating titles, floating polaroids, drifting background, contact form |
+| `images/vibe/` | Polaroid photos, the cartoon avatar and its floating icons |
 
-## Expanding the ESLint configuration
+## Things to personalize
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Email:** `CONTACT_EMAIL` in `js/main.js` and the email card in `contact.html`
+- **LinkedIn / GitHub:** links in `contact.html`
+- **Projects:** the four projects in `projects.html` are samples
+- **Experience:** the entries in `resume.html` are placeholders
+- **Resume PDF:** replace `files/resume.pdf` with your latest resume
+- **Photo:** replace `images/profile.jpg`
+
+## Motion and vibe
+
+- **Rotating titles** under your name: edit the `ROLES` list in `js/main.js`
+- **Polaroids** on the home page: change the photos and captions in `index.html`
+- **Drifting beans, stars, gears and suns:** turned on by `data-drift` on `<body>`. Add it to any other page's `<body>` to turn it on there. Colors and shapes are in `DRIFT_MIX` in `js/main.js`
+- Visitors whose system is set to "reduce motion" automatically see a still version

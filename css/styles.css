@@ -1387,8 +1387,8 @@ a:hover {
 
 /* ==========================================================================
    Dark mode — "dark roast"
-   The site always opens in light mode. Visitors can switch with the
-   sun/moon button; their choice is saved as data-theme on <html>.
+   Every visit opens in light mode. Visitors can switch with the sun/moon
+   button; the choice lasts for that tab and is set as data-theme on <html>.
    ========================================================================== */
 
 :root { color-scheme: light; }

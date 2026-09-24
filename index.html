@@ -8,11 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
-  <!-- Apply saved light/dark choice before the page paints (avoids a flash) -->
+  <!-- Every visit opens in light mode. A dark choice lasts only while the tab
+       is open, and is applied before the page paints (avoids a flash). -->
   <script>
     (function () {
       var t = null;
-      try { t = localStorage.getItem("theme"); } catch (e) {}
+      try {
+        localStorage.removeItem("theme"); // clear choices saved by older versions
+        t = sessionStorage.getItem("theme");
+      } catch (e) {}
       if (t) document.documentElement.setAttribute("data-theme", t);
       document.documentElement.classList.toggle("dark-on", t === "dark");
     })();

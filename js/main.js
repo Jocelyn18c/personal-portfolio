@@ -140,8 +140,8 @@ if (document.body.hasAttribute("data-drift") && !reduceMotion) {
   document.body.prepend(layer);
 }
 
-// Light / dark mode button. The site opens in light mode; a saved choice is
-// applied early by the small script in each page's <head>.
+// Light / dark mode button. Every visit opens in light mode; a choice is kept
+// only for this tab (sessionStorage) and applied early by the <head> script.
 const root = document.documentElement;
 const themeBtn = document.querySelector(".theme-toggle");
 
@@ -162,7 +162,7 @@ if (themeBtn) {
     root.classList.add("theme-anim");
     root.setAttribute("data-theme", next);
     try {
-      localStorage.setItem("theme", next);
+      sessionStorage.setItem("theme", next);
     } catch (e) {}
     applyTheme();
     setTimeout(() => root.classList.remove("theme-anim"), 450);

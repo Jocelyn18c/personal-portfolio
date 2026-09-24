@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jocelyn Heredia — Resume</title>
-  <!-- Apply saved light/dark choice before the page paints (avoids a flash) -->
+  <!-- Every visit opens in light mode. A dark choice lasts only while the tab
+       is open, and is applied before the page paints (avoids a flash). -->
   <script>
     (function () {
       var t = null;
-      try { t = localStorage.getItem("theme"); } catch (e) {}
+      try {
+        localStorage.removeItem("theme"); // clear choices saved by older versions
+        t = sessionStorage.getItem("theme");
+      } catch (e) {}
       if (t) document.documentElement.setAttribute("data-theme", t);
       document.documentElement.classList.toggle("dark-on", t === "dark");
     })();

@@ -10,8 +10,7 @@
       var t = null;
       try { t = localStorage.getItem("theme"); } catch (e) {}
       if (t) document.documentElement.setAttribute("data-theme", t);
-      var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.classList.toggle("dark-on", dark);
+      document.documentElement.classList.toggle("dark-on", t === "dark");
     })();
   </script>
   <link rel="stylesheet" href="css/styles.css" />

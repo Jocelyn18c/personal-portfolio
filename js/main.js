@@ -55,7 +55,6 @@ const ROLES = [
   "HCI Designer.",
   "Coffee enthusiast.",
   "Chicago creative.",
-  "Circuit tinkerer.",
 ];
 const rotatorWord = document.querySelector(".rotator-word");
 if (rotatorWord && !reduceMotion) {
@@ -141,15 +140,13 @@ if (document.body.hasAttribute("data-drift") && !reduceMotion) {
   document.body.prepend(layer);
 }
 
-// Light / dark mode button. The saved choice is applied early by the
-// small script in each page's <head>; this handles clicks and system changes.
+// Light / dark mode button. The site opens in light mode; a saved choice is
+// applied early by the small script in each page's <head>.
 const root = document.documentElement;
 const themeBtn = document.querySelector(".theme-toggle");
-const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 function applyTheme() {
-  const chosen = root.getAttribute("data-theme");
-  const dark = chosen ? chosen === "dark" : systemDark.matches;
+  const dark = root.getAttribute("data-theme") === "dark";
   root.classList.toggle("dark-on", dark);
   if (themeBtn) {
     themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
@@ -158,7 +155,6 @@ function applyTheme() {
 }
 
 applyTheme();
-systemDark.addEventListener("change", applyTheme);
 
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {

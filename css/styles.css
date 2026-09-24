@@ -1387,38 +1387,11 @@ a:hover {
 
 /* ==========================================================================
    Dark mode — "dark roast"
-   Follows the visitor's system setting unless they pick one with the
-   sun/moon button (saved as data-theme on <html>).
-   The token block is repeated twice: once for the system setting,
-   once for the manual choice. Edit both if you change a color.
+   The site always opens in light mode. Visitors can switch with the
+   sun/moon button; their choice is saved as data-theme on <html>.
    ========================================================================== */
 
 :root { color-scheme: light; }
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --espresso: #f5ece2;   /* flips: main text / solid buttons become light */
-    --mocha: #dcbc9d;
-    --caramel: #e39a5b;
-    --latte: #4a3729;
-    --cream: #16100c;      /* flips: page background becomes dark roast */
-    --foam: #231a14;
-    --matcha: #a8c07f;
-    --berry: #ee8a9d;
-    --sun: #f6c46a;
-    --lake: #7fb0e0;
-
-    --bg-alt: #1d1611;
-    --bg-dark: #0d0907;
-    --text-muted: #b6a393;
-    --text-on-dark: #f5ece2;
-    --text-muted-on-dark: #b6a393;
-    --accent: #e8a066;
-    --accent-hover: #f2b27e;
-    --border: #3a2c22;
-  }
-}
 
 :root[data-theme="dark"] {
   color-scheme: dark;
@@ -1444,7 +1417,7 @@ a:hover {
 }
 
 /* Surfaces with hard-coded light colors. `.dark-on` is set on <html> by
-   js/main.js whenever the page is dark (by system setting or by choice). */
+   js/main.js whenever dark mode is on. */
 html.dark-on .nav,
 html.dark-on.home .nav,
 html.dark-on .home .nav { background: rgba(22, 16, 12, 0.72); border-bottom-color: rgba(255, 255, 255, 0.06); }

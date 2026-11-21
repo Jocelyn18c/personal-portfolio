@@ -53,9 +53,11 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 const ROLES = [
   "Computer Engineer.",
   "HCI Designer.",
+  "Product-minded Builder.",
   "Coffee enthusiast.",
   "Chicago creative.",
 ];
+
 const rotatorWord = document.querySelector(".rotator-word");
 if (rotatorWord && !reduceMotion) {
   let i = 0;
